@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md bg-body-primary bg-dark"
+data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/img/ferrari.png" width="30" height="30" alt="" loading="lazy" 
+        style="background-color: aliceblue;">
+      </a>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" [routerLink]="['home']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['automoviles']">Automóviles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['about']">About</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar Automóvil" aria-label="Search"
+              (keyup.enter)="buscarAutomovil(buscarTexto.value)" #buscarTexto>
+          <button class="btn btn-primary my-2 my-sm-0" type="submit"
+                  (click)="buscarAutomovil(buscarTexto.value)">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+

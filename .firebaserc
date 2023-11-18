@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "app-vehiculos-59d19": {
+      "hosting": {
+        "auto": [
+          "app-vehiculos-59d19"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "app-vehiculos-59d19"
+  }
+}

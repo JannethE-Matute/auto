@@ -1,0 +1,21 @@
+<h1>Automoviles:<small> Ferrari, Lamborghini, Mercedes-Benz y Tesla</small></h1>
+<hr>
+<div class="card-columns">
+    <div class="row">
+        <h1 *ngIf="automoviles.length===0">No existen datos para busqueda de: {{texto2}}</h1>
+        <div class="card animated fadeIn fast" style="width: 18rem;" *ngFor="let n1 of automoviles; let i=index">
+            <!-- <img src="assets/img/aquaman.png" class="card-img-top" alt="..."> -->
+            <img [src]="n1.img" class="card-img-top img-fluid" [alt]="n1.nombre">
+            <div class="card-body">
+                <h5 class="card-title">{{n1.nombre}}</h5>
+                <p class="card-text">{{n1.bio}}</p>
+                <p class="card-text"><small class="text-muted">{{n1.fabricacion}}</small></p>
+                <a [routerLink]="['/automovil',n1.idx-1]" class="btn btn-primary">Más información...</a>
+                <p></p>
+                <a (click)="verAutomovil(n1.idx-1)" class="btn btn-outline-primary">Más información(Fn)...</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

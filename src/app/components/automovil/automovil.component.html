@@ -1,0 +1,30 @@
+<h1 class="animated fadeIn text-style">{{automovil.nombre}}<br> <small>fecha fabricación<noscript></noscript>: {{automovil.fabricacion|date:'mediumDate'}}</small></h1>
+<hr>
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="automovil.img" class="img-fluid" [alt]="automovil.nombre">
+        <br><br>
+        <a [routerLink]="['/automoviles']" class="btn btn-outline-primary btn-block"
+            style="align-items: center;width: 100%;">
+            Regresar a Automóviles
+        </a>
+    </div>
+    <div class="col-md-8">
+        <h3 style="color: #644ce9;">{{automovil.nombre}}</h3>
+        <hr>
+        <p>{{automovil.bio}}</p>
+        <div>
+            <img *ngIf="automovil.casa=='Ferrari'" class="img-logo" src="assets/img/logo-ferrari.png" alt="FERRARI">
+            <img *ngIf="automovil.casa=='Lamborghini'" class="img-logo" src="assets/img/logo-lanborghini.png" alt="LAMBORGHINI">
+            <img *ngIf="automovil.casa=='Mercedes-Benz'" class="img-logo" src="assets/img/logo-mercedes.jpg" alt="MERCEDES-BENZ">
+            <img *ngIf="automovil.casa=='BMW'" class="img-logo" src="assets/img/logo-bmw.png" alt="BMW">
+            <img *ngIf="automovil.casa=='Audi'" class="img-logo" src="assets/img/logo-audi.png" alt="AUDI">
+            <img *ngIf="automovil.casa=='Porsche'" class="img-logo" src="assets/img/logo-porsche.png" alt="PORSCHE">
+            <img *ngIf="automovil.casa=='Jaguar'" class="img-logo" src="assets/img/logo-jaguar.png" alt="JAGUAR">
+            <img *ngIf="automovil.casa=='Lexus'" class="img-logo" src="assets/img/logo-lexus.png" alt="LEXUS">
+            <img *ngIf="automovil.casa=='Volvo'" class="img-logo" src="assets/img/logo-volvo.png" alt="VOLVO">
+            <img *ngIf="automovil.casa=='Tesla'" class="img-logo" src="assets/img/logo-tesla.png" alt="TESLA">
+        </div>
+    </div>
+</div>
+
